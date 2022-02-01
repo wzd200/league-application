@@ -6,7 +6,7 @@ const StyledError = styled.div`
 `
 
 const SingleChampionConditions = (props) => {
-    // console.log(props.responseObj.champion)
+    // console.log(props.responseObj.champi on)
 
     return (
         <div>
