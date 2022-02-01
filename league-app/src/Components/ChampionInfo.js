@@ -19,15 +19,16 @@ const ChampionInfo = () => {
         }
         };
 
-        axios.request(options).then(function (response) {
-            console.log(response.data.champion[0]);
-            setResponseObj(response.data);
-            setLoading(false);
-        }).catch(function (error) {
-            console.error(error);
-            setError(true);
-            setLoading(false);
-        });
+        axios.request(options)
+            .then(function (response) {
+                // console.log(response.data.champion[0]);
+                setResponseObj(response.data);
+                setLoading(false);
+            }).catch(function (error) {
+                console.error(error);
+                setError(true);
+                setLoading(false);
+            });
 
         e.preventDefault();
 

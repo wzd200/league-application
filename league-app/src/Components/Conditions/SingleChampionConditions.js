@@ -6,12 +6,19 @@ const StyledError = styled.div`
 `
 
 const SingleChampionConditions = (props) => {
+    // console.log(props.responseObj.champion)
+
     return (
         <div>
             <div>
                 {props.error && <StyledError>Please enter a valid champion name</StyledError>}
                 {props.loading && <div>Loading...</div>}
-                
+                {props.responseObj.cod === 200 ?
+                <div>
+                    <p><strong>{props.responseObj.name}</strong></p>
+                </div>
+                : null
+            }
             </div>
         </div>
     )
